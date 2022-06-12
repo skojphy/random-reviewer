@@ -1,0 +1,52 @@
+body * {
+  font-family: 'Jua', sans-serif;
+  font-size: 1.5rem;
+  color: #444;
+}
+
+.header {
+  font-size: 2rem;
+}
+
+main {
+  text-align: center;
+}
+
+.header {
+  text-align: center;
+  position: relative;
+}
+
+.shuffle {
+  width: 100px;
+  height: 50px;
+  background-color: lavender;
+  border-radius: 1rem;
+  margin: 1rem;
+  cursor: pointer;
+}
+
+.result {
+  margin: 1rem;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.result th,
+.result td {
+  border: 2px lavender solid;
+  height: 3rem;
+}
+
+.result th {
+  color: rgb(102, 102, 152);
+}
+
+.reviewer {
+  width: 200px;
+}
+
+.requester {
+  width: 500px;
+}

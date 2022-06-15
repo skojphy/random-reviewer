@@ -1,4 +1,5 @@
 const members = [
+  { id: 'KH', name: '강희' },
   { id: 'JW', name: '김지원' },
   { id: 'BR', name: '박바름' },
   { id: 'JK', name: '박준규' },
@@ -21,14 +22,18 @@ const getRandomOrder = n =>
     .map(nums => nums[0]);
 
 const suffle = () => {
-  const order = getRandomOrder(12);
+  const order = getRandomOrder(members.length);
   const groups = [order.slice(0, 4), order.slice(4, 8), order.slice(8)];
 
   groups.forEach(group => {
+    console.log(group.map(member => members[member]));
     group.forEach((member, index, groupArray) => {
-      const copiedGroupArray = [...groupArray];
-      copiedGroupArray.splice(index, 1);
-      document.querySelector(`.${members[member].id} .requester`).innerHTML = copiedGroupArray
+      const revierNums = [
+        groupArray[(index + 1) % groupArray.length],
+        groupArray[(index + 2) % groupArray.length],
+        groupArray[(index + 3) % groupArray.length],
+      ];
+      document.querySelector(`.${members[member].id} .requester`).innerHTML = revierNums
         .map(member => members[member].name)
         .join(', ');
     });

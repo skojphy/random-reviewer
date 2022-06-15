@@ -26,7 +26,6 @@ const suffle = () => {
   const groups = [order.slice(0, 4), order.slice(4, 8), order.slice(8)];
 
   groups.forEach(group => {
-    console.log(group.map(member => members[member]));
     group.forEach((member, index, groupArray) => {
       const revierNums = [
         groupArray[(index + 1) % groupArray.length],
